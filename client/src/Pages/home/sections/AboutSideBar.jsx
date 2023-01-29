@@ -8,7 +8,7 @@ const AboutSideBar = () => {
 
   useEffect(() => {
     const getCats = async () => {
-      const res = await axios.get("http://localhost:5000/api/categories");
+      const res = await axios.get("https://archtek.onrender.com/api/categories");
       setCats(res.data);
     };
     getCats();

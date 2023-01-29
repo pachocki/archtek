@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const BlogCards = ({ post }) => {
  
-    const PF = "http://localhost:5000/images/";
+    const PF = "https://archtek.onrender.com/images/";
     return (
         <div className="flex flex-col w-full rounded-xl overflow-hidden shadow-xl">
         <div>

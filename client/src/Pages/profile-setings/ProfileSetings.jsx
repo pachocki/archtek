@@ -10,7 +10,7 @@ const ProfileSetings = () => {
   const [success, setSuccess] = useState(false);
 
   const { user, dispatch } = useContext(Context);
-  const PF = "http://localhost:5000/images/";
+  const PF = "https://archtek.onrender.com/images/";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,12 +29,12 @@ const ProfileSetings = () => {
       data.append("file", file);
       updatedUser.profilePicture = filename;
       try {
-        await axios.post("http://localhost:5000/api/upload/", data);
+        await axios.post("https://archtek.onrender.com/api/upload/", data);
       } catch (err) {}
     }
     try {
       const res = await axios.put(
-        "http://localhost:5000/api/users/" + user._id,
+        "https://archtek.onrender.com/api/users/" + user._id,
         updatedUser
       );
       setSuccess(true);
@@ -45,7 +45,7 @@ const ProfileSetings = () => {
   };
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:5000/api/users/${user._id}`, {
+      await axios.delete(`https://archtek.onrender.com/api/users/${user._id}`, {
         data: {
           userId: user._id,
           username: user.username,

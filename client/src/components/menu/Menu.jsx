@@ -13,7 +13,7 @@ const Menu = () => {
     setShowNavbar(!showNavbar);
   };
 
-  const PF = "http://localhost:5000/images/";
+  const PF = "https://archtek.onrender.com/images/";
 
   const logout = () => {
     dispatch({ type: "LOGOUT" });

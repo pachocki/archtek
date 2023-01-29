@@ -10,7 +10,7 @@ const Singlepost = () => {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
   const [post, setPost] = useState({});
-  const PF = "http://localhost:5000/images/";
+  const PF = "https://archtek.onrender.com/images/";
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [photo, setPhoto] = useState("");
@@ -18,7 +18,7 @@ const Singlepost = () => {
 
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get("http://localhost:5000/api/posts/" + path);
+      const res = await axios.get("https://archtek.onrender.com/api/posts/" + path);
       setPost(res.data);
       setTitle(res.data.title);
       setDesc(res.data.desc);
@@ -29,7 +29,7 @@ const Singlepost = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:5000/api/posts/${post._id}`, {
+      await axios.delete(`https://archtek.onrender.com/api/posts/${post._id}`, {
         data: {
           username: user.username,
         },
@@ -41,7 +41,7 @@ const Singlepost = () => {
   };
   const handleUpdate = async () => {
     try {
-      await axios.put(`http://localhost:5000/api/posts/${post._id}`, {
+      await axios.put(`https://archtek.onrender.com/api/posts/${post._id}`, {
         username: user.username,
         title,
         desc,
