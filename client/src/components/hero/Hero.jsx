@@ -9,7 +9,7 @@ const Hero = () => {
   });
   return (
     <div className="  mt-20 w-full h-[90vh] bg-bottom bg-cover bg-hero-home rounded-xl text-center relative mobile:h-[70vh] mobile:mt-12  ">
-      <h1 className="text-7xl pt-36 pb-4 tablet:text-6xl mobile:text-5xl">
+      <h1 className="text-7xl pt-36 pb-4 tablet:text-6xl mobile:text-5xl mobile:pt-20">
         Arkitektur Design Visualisering{" "}
       </h1>
       <h2 className="text-2xl tablet:text-xl mobile:text-lg">
