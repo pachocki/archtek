@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../../context/Context";
 import axios from "axios";
-
+import { FaUserCircle } from "react-icons/fa";
 const ProfileSetings = () => {
   const [file, setFile] = useState(null);
   const [username, setUsername] = useState("");
@@ -64,7 +64,7 @@ const ProfileSetings = () => {
           Update Your Account
         </h1>
         <span
-          className="text-2xl hover:text-red-500 screen:text-xl mobile:text-lg small-mobile:text-sm small-mobile:border-[1px] small-mobile:p-1 small-mobile:border-black"
+          className="text-2xl hover:text-red-500 screen:text-xl mobile:text-lg small-mobile:text-sm border-[1px] p-1 border-black"
           onClick={handleDelete}
         >
           Delete Account
@@ -73,11 +73,15 @@ const ProfileSetings = () => {
       <div className="pt-10 w-1/3 m-auto screen:w-1/2 mobile:w-full">
         <h2 className="text-2xl mobile:text-xl">Profile Picture</h2>
         <div className="flex gap-5 py-5 items-center">
-          <img
-            src={file ? URL.createObjectURL(file) : PF + user.profilePicture}
-            alt="profil"
-            className="w-[50px] h-[50px] rounded-full"
-          />
+          {user.profilePicture ? (
+            <img
+              src={file ? URL.createObjectURL(file) : PF + user.profilePicture}
+              alt="profil"
+              className="w-[50px] h-[50px] rounded-full"
+            />
+          ) : (
+            <FaUserCircle className="text-4xl screen:text-3xl" />
+          )}
 
           <input
             type="file"

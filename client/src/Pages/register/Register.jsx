@@ -74,9 +74,9 @@ const Register = () => {
                 Sign Up
               </button>
               {error ? (
-             <span className="text-center ">Something went wrong !</span>
+            ""
               ) : (
-                ""
+                <span className="text-center ">Something went wrong !</span>
               )}
             </div>
           </div>

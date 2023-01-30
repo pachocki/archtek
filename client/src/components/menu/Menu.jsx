@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import { NavLink, Link, useNavigate } from "react-router-dom";
-import Image from "../../assets/profil-photo.webp";
-import { BsSearch } from "react-icons/bs";
+import {FaUserCircle} from "react-icons/fa"
 import { BiMenu } from "react-icons/bi";
 import { Context } from "../../context/Context";
 
@@ -56,12 +55,12 @@ const Menu = () => {
 
               <li onClick={handleShowNavbar}>
                 <NavLink to="/setings">
-                  {" "}
-                  <img
+                 {user.profilePicture?( <img
                     src={PF + user.profilePicture}
                     alt="profil"
                     className="w-[40px] h-[40px] rounded-full mobile:w-[80px] mobile:h-[80px] cursor-pointer"
-                  />
+                  />):(<FaUserCircle/>)}
+                 
                 </NavLink>
               </li>
 
